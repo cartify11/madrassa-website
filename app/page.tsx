@@ -1,8 +1,9 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import TalhaBio from '@/components/TalhaBio';
+import ProductIntro from '@/components/ProductIntro';
 import Overview from '@/components/Overview';
 import Features from '@/components/Features';
+import PlatformPreview from '@/components/PlatformPreview';
 import Portals from '@/components/Portals';
 import HowItWorks from '@/components/HowItWorks';
 import Benefits from '@/components/Benefits';
@@ -16,8 +17,9 @@ export default function Home() {
     <main className="min-h-screen bg-slate-50 flex flex-col font-sans">
       <Navbar />
       <Hero />
-      <TalhaBio />
+      <ProductIntro />
       <Overview />
+      <PlatformPreview />
       <Features />
       <Portals />
       <HowItWorks />
