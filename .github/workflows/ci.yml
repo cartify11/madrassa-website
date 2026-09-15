@@ -1,4 +1,4 @@
-name: Marketing Web CI
+name: Marketing Site CI
 
 on:
   push:
@@ -7,21 +7,32 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-verify:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Setup Node.js
+    - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: '20'
         cache: 'npm'
 
     - name: Install dependencies
       run: npm ci
 
-    - name: Build Next.js app
+    - name: Audit NPM dependencies
+      run: npm audit --audit-level=high
+
+    - name: Typecheck
+      run: npm run typecheck
+
+    - name: Build Next.js application
       run: npm run build
+
+    - name: Secret and Token Scan
+      run: |
+        echo "Scanning repository for high-entropy secrets and credential tokens..."
+        ! git grep -n -E '(AIza[0-9A-Za-z_-]{35}|ghp_[0-9A-Za-z]{36}|github_pat_[0-9A-Za-z_]{82}|sk_live_[0-9A-Za-z]{24}|AKIA[0-9A-Z]{16})' -- ':!.env.example'
