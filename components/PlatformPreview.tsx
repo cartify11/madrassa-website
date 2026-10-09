@@ -113,9 +113,9 @@ export default function PlatformPreview() {
               {currentView.caption}
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-mono">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Prepared for Live Production Capture: {currentView.placeholderNote}</span>
+            <div className="inline-flex max-w-full flex-wrap items-center justify-center gap-2 px-3.5 py-1.5 rounded-md bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-mono text-center">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+              <span className="break-all sm:break-normal">Prepared for Live Production Capture: {currentView.placeholderNote}</span>
             </div>
           </div>
         </div>

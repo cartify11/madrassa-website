@@ -5,7 +5,7 @@ import { ArrowRight, Code2, Sparkles, Terminal, Layers } from 'lucide-react';
 export default function Hero() {
   return (
     <section id="about" className="relative overflow-hidden pt-12 pb-16 lg:pt-20 lg:pb-24 border-b border-slate-200 bg-gradient-to-b from-slate-50 via-white to-slate-50/60">
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-emerald-100/50 blur-[100px] -z-10 pointer-events-none rounded-full" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] h-[300px] bg-emerald-100/50 blur-[100px] -z-10 pointer-events-none rounded-full" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Identity Badge */}
