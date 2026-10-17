@@ -1,5 +1,6 @@
 import React from 'react';
 import { DEVELOPER_INFO, SAAS_URLS } from '@/lib/constants';
+import Logo from '@/components/Logo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,9 +12,7 @@ export default function Footer() {
           {/* Brand & Builder */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5 mb-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-700 flex items-center justify-center text-white font-serif font-bold text-lg">
-                م
-              </div>
+              <Logo size="sm" />
               <span className="font-bold text-white text-base tracking-tight">Madrasa SaaS</span>
             </div>
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mb-3 max-w-md">

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { SAAS_URLS } from '@/lib/constants';
 import { Menu, X, ArrowRight, ExternalLink } from 'lucide-react';
+import Logo from '@/components/Logo';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,9 +14,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Brand Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-700 flex items-center justify-center text-white shadow-md shadow-emerald-900/10 group-hover:scale-105 transition-transform">
-              <span className="font-serif text-2xl font-bold">م</span>
-            </div>
+            <Logo size="md" className="group-hover:scale-105 transition-transform" />
             <div>
               <span className="font-bold text-slate-900 text-lg tracking-tight block leading-tight">Madrasa SaaS</span>
               <span className="text-[11px] font-semibold text-emerald-700 uppercase tracking-wider block">By Muhammad Talha</span>
